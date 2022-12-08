@@ -50,9 +50,9 @@ while True:
 
     if update:
         for each in victims_list:
-            message += ' '.join(each)
+            message += ' '.join(' '.join(each).split())
             message += "\n"
-            update = False
         send_not(message)
+        update = False
         print(message)
     time.sleep(29.9)
